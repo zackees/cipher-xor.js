@@ -9,7 +9,7 @@
 
 (function () {
     globalThis.hashpass = function(password) {
-        return wideMD5(wideMD5(password))
+        return wideMD5(wideMD5(wideMD5(wideMD5(password))))
     }
 
     // MD5 can be easily hacked, but a double MD5 is not.
