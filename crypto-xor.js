@@ -20,9 +20,9 @@
     const newRandomByteGenerator = function* (value) {
         while (true) {
             value = wideMD5(value)
-            for (let i = 0; i < value.length; i++) {
-                const codePoint = value.codePointAt(i)
-                yield codePoint
+            for (let i = 0; i < value.length; i+=2) {
+                const byteStr = value.charAt(i)+value.charAt(i+1)
+                yield Number.parseInt(byteStr, 16)
             }
         }
     };
