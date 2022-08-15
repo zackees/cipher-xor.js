@@ -5,7 +5,7 @@
 //   1. Open up a web browser
 //   2. Open up the developer console
 //   3. Paste this file into hit enter
-//   4. run `hashpash('blah')`
+//   4. run `hashpass('blah')`
 
 (function () {
     globalThis.hashpass = function(password) {
