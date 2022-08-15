@@ -1,6 +1,11 @@
 // After this runs there will be global functions
-// globalThis.hashpass(passwordString)
-// globalThis.cryptoXor(passwordString, "message")
+// hashpass(passwordString)
+// cryptoXor(passwordString, "message")
+// To test, do the following:
+//   1. Open up a web browser
+//   2. Open up the developer console
+//   3. Paste this file into hit enter
+//   4. run `hashpash('blah')`
 
 (function () {
     globalThis.hashpass = function(password) {
