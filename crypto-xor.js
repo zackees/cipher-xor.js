@@ -18,6 +18,7 @@
     }
 
     const newRandomByteGenerator = function* (value) {
+        value = wideMD5(value)  // Extra hash to fend off md5 attacks.
         while (true) {
             value = wideMD5(value)
             for (let i = 0; i < value.length; i+=2) {
