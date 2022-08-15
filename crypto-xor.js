@@ -39,7 +39,7 @@
     //   console.log(secret, " should equal ", decodedStr)
     globalThis.cryptoXor = function(secret, msg) {
         const generator = newRandomByteGenerator(secret)
-        result = ""
+        const result = ""
         for (let i = 0; i < msg.length; i++) {
             const codePoint = msg.codePointAt(i)
             const randomByte = generator.next().value
