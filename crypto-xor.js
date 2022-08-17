@@ -45,7 +45,7 @@
             return undefined
         }
         const generator = newRandomByteGenerator(secret)
-        const result = ""
+        let result = ""
         for (let i = 0; i < msg.length; i++) {
             const codePoint = msg.codePointAt(i)
             const randomByte = generator.next().value
