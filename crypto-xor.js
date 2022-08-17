@@ -9,6 +9,9 @@
 
 (function () {
     globalThis.hashpass = function(password) {
+        if (password === undefined) {
+            return undefined
+        }
         return wideMD5(wideMD5(wideMD5(wideMD5(password))))
     }
 
@@ -38,6 +41,9 @@
     //   const decodedStr = bitmangle("pa$$Word", encodedStr)
     //   console.log(secret, " should equal ", decodedStr)
     globalThis.cryptoXor = function(secret, msg) {
+        if (secret === undefined || msg === undefined) {
+            return undefined
+        }
         const generator = newRandomByteGenerator(secret)
         const result = ""
         for (let i = 0; i < msg.length; i++) {
