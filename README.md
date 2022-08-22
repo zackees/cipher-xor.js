@@ -1,22 +1,22 @@
-# crypto-xor.js
+# cipher-xor.js
 
 A simple yet effective encryption mechanism. When run once, the message is encrypted.
 When run twice the message is restored.
 
-## cryptoXor
+## cipherXor
 
 Encryption function. Takes a string secret which is used to generate a random number sequence which is then xor'd against
 the message to created the encrypted digest.
 
 ```js
-const encrypted = cryptoXor("secret", "message")
+const encrypted = cipherXor("secret", "message")
 console.log(encrypted)
 ```
 
 Then to decrypt the message, run it through cryptoXor again:
 
 ```js
-const message2 = cryptoXor("secret", encrypted)
+const message2 = cipherXor("secret", encrypted)
 console.log("message should == ", message2)
 ```
 
