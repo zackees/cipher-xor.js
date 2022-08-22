@@ -20,14 +20,14 @@ const message2 = cipherXor("secret", encrypted)
 console.log("message should == ", message2)
 ```
 
-## hashpass
+## xorCipherHashPass
 
-Generates a hash of the input. This is useful for checking that the user password is correct. It's safe to post this number publically. For example:
+Generates a hash of the input. This is useful for checking that the user password is correct, without exposing what the password is. For example:
 
 ```js
 const PASSWORD_VERIFICATION = "a4fed8c..."
 const userPass = prompt("Enter password")
-if (PASSWORD_VERIFICATION !== hashpass(userPass)) {
+if (PASSWORD_VERIFICATION !== xorCipherHashPass(userPass)) {
   alert("password incorrect")
 } else {
   alert("verified")
@@ -37,4 +37,4 @@ if (PASSWORD_VERIFICATION !== hashpass(userPass)) {
 
 # Testing
 
-Copy and paste the entire source file into the Chrome developer console then test that `cryptoXor("secret", "message")` works, and that `hashpash("secret")` works.
+Copy and paste the entire source file into the Chrome developer console then test that `cipherXor("secret", "message")` works, and that `xorCipherHashPass("secret")` works.
