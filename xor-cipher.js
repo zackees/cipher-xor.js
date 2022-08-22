@@ -1,6 +1,6 @@
 // After this runs there will be global functions
 // hashpass(passwordString)
-// cryptoXor(passwordString, "message")
+// cipherXor(passwordString, "message")
 // To test, do the following:
 //   1. Open up a web browser
 //   2. Open up the developer console
@@ -8,7 +8,7 @@
 //   4. run `hashpass('blah')`
 
 (function () {
-    globalThis.hashpass = function(password) {
+    globalThis.xorCipherHashPass = function(password) {
         if (password === undefined) {
             return undefined
         }
@@ -40,7 +40,7 @@
     //   console.log("encoded": encodedStr)
     //   const decodedStr = bitmangle("pa$$Word", encodedStr)
     //   console.log(secret, " should equal ", decodedStr)
-    globalThis.cryptoXor = function(secret, msg) {
+    globalThis.xorCipher = function(secret, msg) {
         if (secret === undefined || msg === undefined) {
             return undefined
         }
